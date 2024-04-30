@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+- story: Giới thiệu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: introduce
+  - action: utter_introduction
+
+- story: Chào
+  steps:
+  - intent: greet
+  - action: utter_introduction
+
+- story: Tạm biệt
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Kể truyện cười
+  steps:
+  - intent: tell_joke
+  - action: utter_tell_joke
+
+- story: Đưa ra một sự thật ngẫu nhiên
+  steps:
+  - intent: provide_random_fact
+  - action: utter_random_fact
+

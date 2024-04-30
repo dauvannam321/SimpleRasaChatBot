@@ -1,0 +1,51 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: Giới thiệu
+  steps:
+  - user: |
+      Xin chào!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Bạn là gì vậy?
+    intent: introduce
+  - action: utter_introduction
+
+- story: Tạm biệt
+  steps:
+  - user: |
+      Tạm biệt
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: Kể truyện cười
+  steps:
+  - user: |
+      Xin chào!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Bạn là gì vậy?
+    intent: introduce
+  - action: utter_introduction
+  - user: |
+      Hãy kể một câu truyện cười
+    intent: tell_joke
+  - action: utter_tell_joke
+
+- story: Đưa ra một sự thật ngẫu nhiên
+  steps:
+  - user: |
+      Xin chào!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Bạn là gì vậy?
+    intent: introduce
+  - action: utter_introduction
+  - user: |
+      Hãy cho tôi biết một sự thật ngẫu nhiên
+    intent: provide_random_fact
+  - action: utter_random_fact

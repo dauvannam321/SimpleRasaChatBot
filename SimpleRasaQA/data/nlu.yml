@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - chào
+    - xin chào
+    - alo
+    - hey
+    - hello
+    - hi
+    - chào bạn
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - tạm biệt nhé
+    - chào tạm biệt
+    - hẹn gặp lại
+    - bye
+    - good bye
+    - bye bye
+    - chúc bạn một ngày tốt lành
+
+- intent: tell_joke
+  examples: |
+    - Kể một câu chuyện cười đi
+    - Cho mình nghe một câu chuyện vui
+    - Đùa một chút đi
+    - Kể một truyện cười
+
+- intent: provide_random_fact
+  examples: |
+    - Cho mình biết một sự thật ngẫu nhiên
+    - Kể một sự thật thú vị đi
+    - Sự thật ngẫu nhiên
+    - Kể một sự thật
+
+- intent: introduce
+  examples: |
+    - Giới thiệu về bản thân đi
+    - Bạn là ai?
+    - Làm quen đi
+    - Tên của bạn là gì?
+    - Bạn là gì vậy?
+
+
+
