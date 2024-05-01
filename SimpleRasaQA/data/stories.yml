@@ -28,3 +28,13 @@ stories:
   - intent: provide_random_fact
   - action: utter_random_fact
 
+- story: Đăng ký khóa học AIO
+  steps:
+  - intent: greet
+  - action: utter_introduction
+  - intent: ask_about_course
+  - action: utter_course_info
+  - intent: pay_tuition_fees
+  - action: utter_confirm_NameAndFees
+
+
