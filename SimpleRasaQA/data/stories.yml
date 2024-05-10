@@ -1,22 +1,10 @@
 version: "3.1"
 
 stories:
-- story: Introduce
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: introduce
-  - action: utter_introduction
-
 - story: Greet
   steps:
   - intent: greet
   - action: utter_introduction
-
-- story: Bye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
 
 - story: Tell joke
   steps:
@@ -35,6 +23,8 @@ stories:
   - intent: how_to_register 
   - action: utter_ask_info
   - intent: user_info
+  - action: utter_ask_fees
+  - intent: pay_fees
   - action: utter_confirm
 
 

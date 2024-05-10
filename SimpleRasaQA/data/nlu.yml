@@ -69,4 +69,12 @@ nlu:
     - Bạn có thể gọi tôi là [Sinh](PERSON), số điện thoại của tôi là [0777654321](phone_number) và ID của tôi là [654321098765](user_id).
     - Tôi được biết đến là [Xuân](PERSON), số điện thoại của tôi là [0835678910](phone_number) và ID của tôi là [789012345678](user_id).
 
-
+- intent: pay_fees
+  examples: |
+    - Tôi đã thanh toán học phí là [20](fees) triệu đồng.
+    - Học phí [15](fees) triệu đồng đã được tôi thanh toán.
+    - Tôi đã hoàn tất việc thanh toán học phí là [5](fees) triệu đồng.
+    - Việc thanh toán học phí của tôi là [18](fees) triệu đồng đã hoàn thành.
+    - [4](fees) triệu đồng đã được thanh toán cho học phí.
+    - Học phí, số tiền là [10](fees) triệu đồng, đã được thanh toán.
+    - Tôi vừa chuyển khoản [12](fees) triệu đồng cho học phí.

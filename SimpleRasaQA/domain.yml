@@ -8,14 +8,54 @@ intents:
   - ask_about_course 
   - how_to_register 
   - user_info
+  - pay_fees
+
+entities:
+  - PERSON
+  - fees
+  - phone_number
+  - user_id
+
+slots:
+  user_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: PERSON
+      intent: user_info
+
+  course_fees:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: fees
+      intent: pay_fees
+
+  phone_number:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: phone_number
+      intent: user_info
+
+  user_id:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: user_id
+      intent: user_info 
 
 responses:
-  utter_greet:
-  - text: "Xin chào. Bạn có khỏe không?"
-  - text: "Chào bạn, ngày hôm nay của bạn thế nào rồi?"
-  - text: "Xin chào, bạn đang cảm thấy thế nào?"
-  - text: "Chào bạn, tôi có thể giúp gì được?"
-  - text: "Xin chào! Bạn có khỏe không?"
+  utter_introduction:
+  - text: "Xin chào, tôi là Rasa, trợ lý ảo của bạn! Tôi ở đây để giúp bạn với bất kỳ câu hỏi nào bạn có."
+  - text: "Chào bạn! Tôi là Rasa, trợ lý ảo của bạn. Làm thế nào tôi có thể giúp bạn hôm nay?"
+  - text: "Xin chào bạn! Tôi là Rasa. Bạn cần tôi giúp gì không?"
+  - text: "Xin chào! Tôi là Rasa. Cho tôi biết tôi có thể giúp gì cho bạn."
+  - text: "Xin chào bạn! Tôi là Rasa. Bạn cần giúp đỡ gì không?"
 
   utter_goodbye:
   - text: "Tạm biệt"
@@ -38,12 +78,35 @@ responses:
   - text: "Chuối là loại quả mọng, nhưng dâu thì không phải!"
   - text: "Bạch tuộc có ba trái tim!"
 
-  utter_introduction:
-  - text: "Xin chào, tôi là Rasa, trợ lý ảo của bạn! Tôi ở đây để giúp bạn với bất kỳ câu hỏi nào bạn có."
-  - text: "Chào bạn! Tôi là Rasa, trợ lý ảo của bạn. Làm thế nào tôi có thể giúp bạn hôm nay?"
-  - text: "Xin chào bạn! Tôi là Rasa. Bạn cần tôi giúp gì không?"
-  - text: "Xin chào! Tôi là Rasa. Cho tôi biết tôi có thể giúp gì cho bạn."
-  - text: "Xin chào bạn! Tôi là Rasa. Bạn cần giúp đỡ gì không?"
+  utter_course_info:
+  - text: "Khóa học AIO được lên kế hoạch diễn ra trong 1 năm và có học phí là 20 triệu VND."
+  - text: "Khóa học AIO của chúng tôi kéo dài trong vòng 1 năm và có giá là 20 triệu VND."
+  - text: "Đối với khóa học AIO, thời gian kéo dài là 1 năm và chi phí là 20 triệu VND."
+  - text: "Bạn có thể mong đợi khóa học AIO kéo dài trong 1 năm, với một học phí là 20 triệu VND."
+
+  utter_ask_info:
+  - text: "Xin vui lòng cung cấp tên, số điện thoại và số CCCD"
+  - text: "Bạn có thể cung cấp tên, số điện thoại và số CCCD để hoàn tất thủ tục không?"
+  - text: "Chúng tôi cần thông tin của bạn bao gồm tên, số điện thoại và số CCCD"
+  - text: "Để tiếp tục, vui lòng cung cấp thông tin cá nhân bao gồm tên, số điện thoại và số CCCD"
+  - text: "Xin vui lòng cho chúng tôi biết tên, số điện thoại và số CCCD"
+
+  utter_ask_fees:
+  - text: "Cảm ơn {user_name}, tôi đã xác nhận thông tin của bạn. Bạn muốn thanh toán trước học phí bao nhiêu?"
+  - text: "Cảm ơn {user_name}, thông tin của bạn đã được xác nhận. Bạn muốn thanh toán trước bao nhiêu triệu đồng cho học phí?"
+  - text: "Xin cảm ơn {user_name}, thông tin của bạn đã được xác nhận. Bạn muốn thanh toán trước bao nhiêu tiền học phí?"
+  - text: "Cảm ơn {user_name} đã cung cấp thông tin. Bây giờ, bạn muốn thanh toán trước học phí bao nhiêu?"
+  - text: "Xin cảm ơn {user_name}, chúng tôi đã xác nhận thông tin của bạn. Bạn muốn thanh toán trước học phí một số tiền nào?"
+
+  utter_confirm:
+  - text: "Cảm ơn {user_name} đã đăng ký khóa học AIO với thông tin liên lạc là số điện thoại {phone_number} và ID {user_id}.
+  Chúng tôi đã nhận được thanh toán học phí của bạn là {course_fees} triệu VND và đã xác nhận thành công."
+  - text: "Xin chân thành cảm ơn {user_name} đã tham gia khóa học AIO và cung cấp thông tin số điện thoại {phone_number} cùng ID {user_id}.
+  Thanh toán học phí của bạn, một khoản là {course_fees} triệu VND, đã được xử lý và ghi nhận."
+  - text: "Chúng tôi rất biết ơn sự tham gia của {user_name} vào khóa học AIO, thông tin liên hệ của bạn là số điện thoại {phone_number} và ID {user_id}.
+  Thanh toán học phí của bạn, tổng cộng {course_fees} triệu VND, đã được tiếp nhận và xác nhận."
+  - text: "Cảm ơn {user_name} đã đăng ký khóa học AIO với số điện thoại {phone_number} và ID {user_id}.
+  Chúng tôi đã nhận thanh toán học phí của bạn, một khoản là {course_fees} triệu VND, và đã hoàn tất xác nhận."
 
 session_config:
   session_expiration_time: 60
