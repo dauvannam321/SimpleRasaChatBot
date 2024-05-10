@@ -1,40 +1,40 @@
 version: "3.1"
 
 stories:
-- story: Giới thiệu
+- story: Introduce
   steps:
   - intent: greet
   - action: utter_greet
   - intent: introduce
   - action: utter_introduction
 
-- story: Chào
+- story: Greet
   steps:
   - intent: greet
   - action: utter_introduction
 
-- story: Tạm biệt
+- story: Bye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: Kể truyện cười
+- story: Tell joke
   steps:
   - intent: tell_joke
   - action: utter_tell_joke
 
-- story: Đưa ra một sự thật ngẫu nhiên
+- story: Provide random fact
   steps:
   - intent: provide_random_fact
   - action: utter_random_fact
 
-- story: Đăng ký khóa học AIO
+- story: Register AIO course
   steps:
-  - intent: greet
-  - action: utter_introduction
-  - intent: ask_about_course
+  - intent: ask_about_course 
   - action: utter_course_info
-  - intent: pay_tuition_fees
-  - action: utter_confirm_NameAndFees
+  - intent: how_to_register 
+  - action: utter_ask_info
+  - intent: user_info
+  - action: utter_confirm
 
 
