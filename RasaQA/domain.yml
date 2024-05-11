@@ -7,6 +7,11 @@ intents:
   - pay_fees
   - ask_about_course
 
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+
 entities:
   - PERSON
   - fees
@@ -58,6 +63,16 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa. What can i help you?"
 
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://imgur.com/gallery/NWLnxln"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  
   utter_ask_name_and_phone_number:
   - text: "Please share your name, phone number and id with us."
   - text: "Could you provide your name, phone number and id, please?"
