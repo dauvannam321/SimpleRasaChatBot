@@ -1,6 +1,105 @@
+# version: "3.1"
+
+# nlu:
+# - intent: greet
+#   examples: |
+#     - hey
+#     - hello
+#     - hi
+#     - hello there
+#     - good morning
+#     - good evening
+#     - moin
+#     - hey there
+#     - let's go
+#     - hey dude
+#     - goodmorning
+#     - goodevening
+#     - good afternoon
+
+# - intent: goodbye
+#   examples: |
+#     - cu
+#     - good by
+#     - cee you later
+#     - good night
+#     - bye
+#     - goodbye
+#     - have a nice day
+#     - see you around
+#     - bye bye
+#     - see you later
+
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
 version: "3.1"
 
 nlu:
+- regex: phone_number
+  examples: |
+    - ^(032|033|034|035|036|037|038|039|096|097|098|086|083|084|085|081|082|088|091|094|070|079|077|076|078|090|093|089|056|058|092|059|099)[0-9]{7}$
+
+- regex: user_id
+  examples: |
+    - ^\d{12}$
+
 - intent: greet
   examples: |
     - hey
@@ -22,7 +121,6 @@ nlu:
     - cu
     - good by
     - cee you later
-    - good night
     - bye
     - goodbye
     - have a nice day
@@ -30,62 +128,31 @@ nlu:
     - bye bye
     - see you later
 
-- intent: affirm
+- intent: user_info
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - My name is [John](PERSON), my phone number is [0324593069](phone_number) and my id is [129593960391](user_id)
+    - I'm [Alice](PERSON), my phone number is [0390295960](phone_number) and my id is [386029386012](user_id)
+    - Call me [Mike](PERSON), my phone number is [0941025930](phone_number) and my id is [693850395039](user_id)
+    - You can call me [Sara](PERSON), my phone number is [0840293850](phone_number) and my id is [293059386930](user_id)
+    - I'm known as [David](PERSON), my phone number is [0791820592](phone_number) and my id is [306283960301](user_id)
+    - My name is [Anna](PERSON), my phone number is [0321840295](phone_number) and my id is [123456789012](user_id)
+    - I'm [Michael](PERSON), my phone number is [0987654321](phone_number) and my id is [987654321098](user_id)
+    - Call me [Emily](PERSON), my phone number is [0561234567](phone_number) and my id is [456789012345](user_id)
+    - You can call me [Sam](PERSON), my phone number is [0777654321](phone_number) and my id is [654321098765](user_id)
+    - I'm known as [Sophia](PERSON), my phone number is [0835678910](phone_number) and my id is [789012345678](user_id)
 
-- intent: deny
+- intent: pay_fees
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - I have already paid the tuition fee of [20](fees) million VND.
+    - The tuition fee of [15](fees) million VND has been paid by me.
+    - I've completed the payment for the tuition fee, which is [5](fees) million VND.
+    - My payment of [18](fees) million VND for the tuition fee is done.
+    - [4](fees) million VND has been paid as the tuition fee.
+    - The tuition fee, which amounts to [10](fees) million VND, has been settled.
+    - I've just transferred [12](fees) million VND for the tuition fee.
 
-- intent: mood_great
+- intent: ask_about_course
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Can you provide information about the AIO courses?
+    - I'm interested in learning more about the courses offered.
+    - Could you tell me about the AIO courses?
