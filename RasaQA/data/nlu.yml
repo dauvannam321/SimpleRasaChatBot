@@ -47,6 +47,7 @@ nlu:
     - tất nhiên rồi
     - nghe hay đấy
     - đúng
+    - có
 
 - intent: deny
   examples: |
