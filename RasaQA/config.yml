@@ -8,7 +8,7 @@ assistant_id: 20240501-173808-matte-thyme
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+language: vi
 
 pipeline:
 - name: WhitespaceTokenizer

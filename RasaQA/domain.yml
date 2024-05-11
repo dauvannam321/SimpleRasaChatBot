@@ -54,54 +54,54 @@ slots:
 responses:
   utter_goodbye:
   - text: "Bye"
-  - text: "goodbye"
-  - text: "have a nice day"
-  - text: "see you around"
+  - text: "Tạm biệt"
+  - text: "Một ngày tốt lành"
+  - text: "Hẹn gặp lại sau"
   - text: "bye bye"
-  - text: "see you later"
+  - text: "Hẹn gặp lại"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa. What can i help you?"
+  - text: "Tôi là trợ lý ảo được tạo bởi Rasa, tôi có thể giúp gì bạn?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Thứ này có thể làm bạn vui:"
     image: "https://imgur.com/gallery/NWLnxln"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Điều này có giúp ích cho bạn không?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Tuyệt, rất tốt!"
   
   utter_ask_name_and_phone_number:
-  - text: "Please share your name, phone number and id with us."
-  - text: "Could you provide your name, phone number and id, please?"
-  - text: "We need your name, phone number and id. Could you provide them?"
-  - text: "To continue, please give us your name, phone number and id."
-  - text: "For our records, we require your name, phone number and id. Can you provide them?"
+  - text: "Cho tôi xin thông tin về tên, sđt và cccd."
+  - text: "Hãy cung cấp cho tôi tên, số điện thoại và số cccd"
+  - text: "Tôi cần tên, sđt và cccd của bạn. Bạn có thể cung cấp chứ?"
+  - text: "Để tiếp tục, cho tôi xin tên, số điện thoại và số cccd của bạn"
+  - text: "Tôi cần tên, sđt và cccd của bạn!"
 
   utter_course_info:
-  - text: "The AIO course is scheduled to run for 1 year and has a tuition fee of 20 million VND."
-  - text: "Our AIO course spans over 1 year and is priced at 20 million VND."
-  - text: "For the AIO course, the duration is 1 year and the cost is 20 million VND."
-  - text: "You can expect the AIO course to last for 1 year, with a fee of 20 million VND."
+  - text: "Khóa học AIO kéo dài 1 năm và học phí là 20 triệu VND"
+  - text: "Khóa học kéo dài 1 năm và có chi phí 20 triệu VND."
+  - text: "Đối với khóa học AIO, thời gian là 1 năm và học phí là 20 triệu VND"
+  - text: "AIO sẽ kéo dài 1 năm với học phí là 20 triệu VND"
 
   utter_about_fees:
-  - text: "How much would you like to pay upfront for the course?"
-  - text: "What amount are you considering for the upfront payment for the course?"
-  - text: "How much do you intend to prepay for the course?"
-  - text: "What's the upfront payment amount you'd like to make for the course?"
-  - text: "How much do you want to pay in advance for the course?"
+  - text: "Bạn muốn thanh toán trước bao nhiêu cho khóa học?"
+  - text: "Bạn định trả trước bao nhiêu cho khóa học"
+  - text: "Bạn muốn trả bao nhiêu cho khóa học"
+  - text: "Bạn muốn thanh toán trước bao nhiêu cho khóa học AIO?"
+  - text: "Bạn định thanh toán trước bao nhiêu cho khóa học?"
 
   utter_confirm:
-  - text: "Thank you, {user_name} with phone number {phone_number} and id {user_id}, for enrolling in the AIO course. 
-  Your payment of {course_fees} million VND for the tuition fee has been received and confirmed."
-  - text: "We're grateful, {user_name} with phone number {phone_number} and id {user_id}, for your enrollment in the AIO course. 
-  Your payment of {course_fees} million VND towards the tuition fee has been acknowledged."
-  - text: "Thanks, {user_name} with phone number {phone_number} and id {user_id}, for signing up for the AIO course. 
-  Your payment of {course_fees} million VND for the tuition fee has been successfully processed and verified."
-  - text: "Appreciate it, {user_name} with phone number {phone_number} and id {user_id}, for your registration in the AIO course. 
-  We've verified that your payment of {course_fees} million VND for the tuition fee has been completed."
+  - text: "Cảm ơn, {user_name} với sđt {phone_number} và CCCD {user_id}, vì đã tham gia khóa học AIO. 
+  Học phí {course_fees} triệu VND đã được bạn thanh toán và xác nhận."
+  - text: "Rất trân trọng, {user_name} sđt {phone_number} và CCCD {user_id}, vì đã chọn khóa học AIO. 
+  Học phí {course_fees} triệu VND đã được xác nhận."
+  - text: "Cảm ơn, {user_name}. Sđt {phone_number} và CCCD {user_id} đã được xác nhận. 
+  Tôi đã nhận được {course_fees} triệu VND cho học phí của khóa học."
+  - text: "Tôi đã xác nhận, {user_name} với sđt {phone_number} và CCCD {user_id}, về việc đăng kí khóa học AIO. 
+  Tôi đã xác nhận bạn đã thanh toán {course_fees} triệu VND cho học phí."
   
 session_config:
   session_expiration_time: 60

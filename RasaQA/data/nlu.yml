@@ -11,110 +11,112 @@ nlu:
 
 - intent: greet
   examples: |
-    - hey
-    - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - hey
+    - này
+    - chào
+    - xin chào
+    - chào đằng ấy
+    - chào buổi sáng
+    - chào buổi chiều
+    - buổi sáng tốt lành
+    - chào bạn
+    - bắt đầu nào
+    - ê
+    - buổi sáng tốt lành
+    - buổi chiều tốt lành
+    - chào buổi chiều
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
+    - tạm biệt
+    - chào tạm biệt
+    - hẹn gặp lại
     - bye
-    - goodbye
-    - have a nice day
-    - see you around
+    - hẹn gặp lại bạn
+    - chúc bạn một ngày vui vẻ
+    - hẹn gặp lại sau
     - bye bye
-    - see you later
+    - hẹn gặp bạn sau
 
 - intent: affirm
   examples: |
-    - yes
+    - đúng vậy
     - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - đúng rồi
+    - tất nhiên rồi
+    - nghe hay đấy
+    - đúng
 
 - intent: deny
   examples: |
-    - no
+    - không
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - không phải
+    - Tôi không nghĩ vậy
+    - Không thích
+    - Không đời nào
+    - Không hẳn
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - hoàn hảo
+    - tuyệt
+    - tuyệt vời
+    - cảm giác rất tốt
+    - rất tuyệt vời
+    - Tôi cảm thấy rất tốt
+    - Tôi thấy tuyệt vời
+    - Rất vui
+    - Tôi thực sự rất vui
+    - Cực kỳ vui
+    - Rất ổn
+    - Cực kỳ ổn
+    - rất tuyệt
+    - cực ổn
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Ngày hôm nay của tôi rất tệ
+    - Tôi buồn
+    - Tôi cảm thấy không ổn
+    - Cảm giác rất thất vọng
+    - Rất buồn
+    - Tôi buồn quá
+    - Buồn
+    - Rất buồn
+    - Không vui
+    - Không tốt 
+    - Không ổn lắm
+    - Cực buồn
+    - Buồnnn
+    - Hơi buồn
 
 - intent: user_info
   examples: |
-    - My name is [John](PERSON), my phone number is [0324593069](phone_number) and my id is [129593960391](user_id)
-    - I'm [Alice](PERSON), my phone number is [0390295960](phone_number) and my id is [386029386012](user_id)
-    - Call me [Mike](PERSON), my phone number is [0941025930](phone_number) and my id is [693850395039](user_id)
-    - You can call me [Sara](PERSON), my phone number is [0840293850](phone_number) and my id is [293059386930](user_id)
-    - I'm known as [David](PERSON), my phone number is [0791820592](phone_number) and my id is [306283960301](user_id)
-    - My name is [Anna](PERSON), my phone number is [0321840295](phone_number) and my id is [123456789012](user_id)
-    - I'm [Michael](PERSON), my phone number is [0987654321](phone_number) and my id is [987654321098](user_id)
-    - Call me [Emily](PERSON), my phone number is [0561234567](phone_number) and my id is [456789012345](user_id)
-    - You can call me [Sam](PERSON), my phone number is [0777654321](phone_number) and my id is [654321098765](user_id)
-    - I'm known as [Sophia](PERSON), my phone number is [0835678910](phone_number) and my id is [789012345678](user_id)
+    - Tôi tên là [Dung](PERSON), số điện thoại [0324593069](phone_number) và CCCD [129593960391](user_id)
+    - Tôi là [An](PERSON), sđt [0390295960](phone_number) và CCCD [386029386012](user_id)
+    - Tôi tên [Mai](PERSON), số điện thoại [0941025930](phone_number) và CCCD là [693850395039](user_id)
+    - Tôi là [Sang](PERSON), sđt của tôi là [0840293850](phone_number) và CCCD là [293059386930](user_id)
+    - Tôi tên [Đăng](PERSON), sđt của tôi [0791820592](phone_number) và CCCD [306283960301](user_id)
+    - [Oanh](PERSON), [0321840295](phone_number) và [123456789012](user_id)
+    - Tôi là [Minh](PERSON), số điện thoại [0987654321](phone_number) và CCCD là [987654321098](user_id)
+    - Tôi là [Ly](PERSON), sđt của tôi là [0561234567](phone_number) và CCCD là [456789012345](user_id)
+    - [Mạnh](PERSON), sđt của tôi [0777654321](phone_number) và CCCD [654321098765](user_id)
+    - Tôi tên [Xuân](PERSON), sdt là [0835678910](phone_number) và CCCD [789012345678](user_id)
 
 - intent: pay_fees
   examples: |
-    - I have already paid the tuition fee of [20](fees) million VND.
-    - The tuition fee of [15](fees) million VND has been paid by me.
-    - I've completed the payment for the tuition fee, which is [5](fees) million VND.
-    - My payment of [18](fees) million VND for the tuition fee is done.
-    - [4](fees) million VND has been paid as the tuition fee.
-    - The tuition fee, which amounts to [10](fees) million VND, has been settled.
-    - I've just transferred [12](fees) million VND for the tuition fee.
+    - Tôi đã đóng [20](fees) triệu tiền học phí.
+    - Học phí [15](fees) triệu đã được tôi đóng.
+    - Tôi đã hoàn thành học phí [5](fees) triệu.
+    - Đã đóng [18](fees) triệu học phí.
+    - [4](fees) triệu tiền học phí đã được đóng.
+    - Khoảng học phí [10](fees) triệu đã được thanh toán.
+    - Tôi đã chuyển [12](fees) triệu học phí.
 
 - intent: ask_about_course
   examples: |
-    - Can you provide information about the AIO courses?
-    - I'm interested in learning more about the courses offered.
-    - Could you tell me about the AIO courses?
+    - Cung cấp thông tin về khóa học AIO
+    - Tôi đang quan tâm về khóa học AIO.
+    - Cho tôi thêm thông tin về khóa học AIO?
